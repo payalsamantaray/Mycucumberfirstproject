@@ -1,5 +1,6 @@
 package runner;
 
+/*import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -18,6 +19,17 @@ import io.cucumber.junit.CucumberOptions;
         },
         monochrome = true
 )
-public class rediffrunner {
+public class rediffrunner extends AbstractTestNGCucumberTests {
 
+}*/
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(
+        features = "src/test/resources/features",
+        glue = "stepdefinitions",
+        plugin = {"pretty"}
+)
+public class RediffRunner extends AbstractTestNGCucumberTests {
 }
